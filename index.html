@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Digital Footprint Simulator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- Screen 1 -->
+      <div class="screen active" id="screen1">
+        <h1>Your Digital Footprint</h1>
+        <p>
+          Posting online can feel harmless and momentary, but it doesn’t always
+          stay that way.
+        </p>
+        <button onclick="nextScreen(2)">Start</button>
+      </div>
+
+      <!-- Screen 2 -->
+      <div class="screen" id="screen2">
+        <h2>Introducing Lucy</h2>
+        <img
+          src="Lucy-image1000_F_644554442_gKJGvrkRWXvidCQuqheiPX6ausYt7tnv.jpg"
+          alt="Lucy"
+          class="profile-image"
+        />
+        <p>
+          Lucy is a college student who is active on social media. Often posting
+          whatever comes to mind, without a second thought.
+        </p>
+        <button onclick="nextScreen(3)">Continue</button>
+      </div>
+
+      <!-- Screen 3 -->
+      <div class="screen" id="screen3">
+        <h2>Lucy plans to update her page, which should she pick?</h2>
+        <div class="post-option">
+          <img
+            src="DuringFInals1000_F_531317904_jMc79lih8REHY36JCflAp5fMi0exdD2u.jpg"
+            alt="Studying for finals"
+          />
+          <button class="safe" onclick="choosePost('safe')">
+            Post: Me during finals fr! #studying #stress
+          </button>
+        </div>
+
+        <div class="post-option">
+          <img
+            src="WeekendPost1000_F_551049495_81Fmo4Rmoveae4dsZ7UcnsuScFVNM9bB.jpg"
+            alt="Weekend post"
+          />
+          <button class="risky" onclick="choosePost('risky')">
+            Post: About last weekend… #partying
+          </button>
+        </div>
+      </div>
+
+      <!-- Screen 4 -->
+      <div class="screen" id="screen4">
+        <h2>Result</h2>
+        <p id="resultText"></p>
+        <button onclick="nextScreen(5)">Next</button>
+      </div>
+
+      <div class="screen" id="screen5">
+        <h2>Privacy Settings</h2>
+        <p>Who should see Lucy's post?</p>
+
+        <button class="risky" onclick="choosePrivacy('public')">
+          Public: Everyone
+        </button>
+        <button class="safe" onclick="choosePrivacy('private')">
+          Private: Only Friends
+        </button>
+      </div>
+
+      <!-- Final Screen becomes screen6 -->
+      <div class="screen" id="screen6">
+        <h2>Final Outcome</h2>
+        <p id="finalMessage">
+          Lucy's experience is but one example. Your digital footprint can be
+          defined by each post you make, often in unexpected ways.
+        </p>
+
+        <button onclick="nextScreen(7)">Continue</button>
+      </div>
+
+      <div class="screen" id="screen7">
+        <h2>Final Reflection</h2>
+        <p>
+          Lucy's experience is just one example. Your digital footprint can be
+          defined by each post you make, often in unexpected ways.
+        </p>
+
+        <button onclick="restart()">Try Again</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
