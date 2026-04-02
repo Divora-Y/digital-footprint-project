@@ -11,7 +11,7 @@
       <div class="screen active" id="screen1">
         <h1>Your Digital Footprint</h1>
         <p>
-          Posting online can feel harmless and momentary, but it doesn’t always
+          Posting online can feel harmless and momentary, but it doesn't always
           stay that way.
         </p>
         <button onclick="nextScreen(2)">Start</button>
@@ -91,6 +91,146 @@
         <p>
           Lucy's experience is just one example. Your digital footprint can be
           defined by each post you make, often in unexpected ways.
+        </p>
+
+        <button onclick="nextScreen(8)">Try another scenario</button>
+
+        <button onclick="restart()">Try Again</button>
+      </div>
+      <!-- ALEX-->
+      <div class="screen" id="screen8">
+        <h2>Introducing Alex</h2>
+
+        <img src="Alex.webp" alt="Character" class="profile-image" />
+
+        <p>
+          Alex is someone who posts consistently, and care a lot for attention
+          and engagement. He often post without thinking about the consequences,
+          and sometimes share things that are inappropriate or controversial.
+        </p>
+
+        <button onclick="nextScreen(9)">Continue</button>
+      </div>
+
+      <div class="screen" id="screen9">
+        <h2>Alex is about to post, what should he share?</h2>
+
+        <div class="post-option">
+          <img src="Alex safe post.jpeg" alt="Safe post" />
+
+          <button class="safe" onclick="choosePost2('safe')">
+            Post: Jim time!
+          </button>
+        </div>
+
+        <div class="post-option">
+          <img src="Alex's post[Risky].jpg" alt="Risky post" />
+
+          <button class="risky" onclick="choosePost2('risky')">
+            Post: Hmmm.....
+          </button>
+        </div>
+      </div>
+      <div class="screen" id="screen10">
+        <h2>What happens next?</h2>
+        <p id="resultText2"></p>
+
+        <button onclick="nextScreen(11)">Next</button>
+      </div>
+      <div class="screen" id="screen11">
+        <h2>Who should see it?</h2>
+
+        <button class="safe" onclick="choosePrivacy2('private')">
+          Private: Close friends only
+        </button>
+
+        <button class="risky" onclick="choosePrivacy2('public')">
+          Public: Everyone
+        </button>
+      </div>
+      <div class="screen" id="screen12">
+        <h2>Final Outcome</h2>
+        <p id="finalText2"></p>
+
+        <button onclick="nextScreen(13)">Back to Reflection</button>
+      </div>
+      <div class="screen" id="screen13">
+        <h2>Final Reflection</h2>
+        <p>
+          Alex's story demonstrates how seeking attention online can have
+          unwanted outcomes. Long after it is shared, a single post can
+          influence how people perceive you.
+        </p>
+
+        <button onclick="nextScreen(14)">Next Scenario</button>
+      </div>
+
+      <!-- TULSE -->
+      <div class="screen" id="screen14">
+        <h2>Introducing Tulse</h2>
+
+        <img src="Tulse.jpeg" alt="Character" class="profile-image" />
+
+        <p>
+          Tulse works for a large corporation and frequently posts updates about
+          her professional life on the internet. She occasionally shares content
+          without giving it any thought.
+        </p>
+
+        <button onclick="nextScreen(15)">Continue</button>
+      </div>
+
+      <div class="screen" id="screen15">
+        <h2>Tulse is about to post, what should she share?</h2>
+
+        <div class="post-option">
+          <img src="Tulse post safe.jpeg" alt="Safe post" />
+
+          <button class="safe" onclick="choosePost3('safe')">
+            Post: Busy day at work, but grateful for the opportunities #career
+            #growth
+          </button>
+        </div>
+
+        <div class="post-option">
+          <img src="Tulse Risky.jpeg" alt="Risky post" />
+
+          <button class="risky" onclick="choosePost3('risky')">
+            Post: Some of the decisions being made at work lately are honestly
+            questionable… not a good look.
+          </button>
+        </div>
+      </div>
+      <div class="screen" id="screen16">
+        <h2>What happens next?</h2>
+        <p id="resultText3"></p>
+
+        <button onclick="nextScreen(17)">Next</button>
+      </div>
+      <div class="screen" id="screen17">
+        <h2>Who should see it?</h2>
+
+        <button class="safe" onclick="choosePrivacy3('private')">
+          Private: Close friends only
+        </button>
+
+        <button class="risky" onclick="choosePrivacy3('public')">
+          Public: Everyone
+        </button>
+      </div>
+      <div class="screen" id="screen18">
+        <h2>Final Outcome</h2>
+        <p id="finalText3"></p>
+
+        <button onclick="nextScreen(19)">Back to Reflection</button>
+      </div>
+      <div class="screen" id="screen19">
+        <h2>Final Reflection</h2>
+        <p>
+          One important point is reinforced by Tulse's experience: every post
+          adds to your digital footprint. What you post online, whether for
+          personal or professional purposes, can affect how other people view
+          you, and occasionally the consequences can be worse than expected.
         </p>
 
         <button onclick="restart()">Try Again</button>

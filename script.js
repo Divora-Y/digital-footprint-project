@@ -1,6 +1,12 @@
 let postChoice = "";
 let privacyChoice = "";
 
+let postChoice2 = "";
+let privacyChoice2 = "";
+
+let postChoice3 = "";
+let privacyChoice3 = "";
+
 function nextScreen(screenNumber) {
     let screens = document.querySelectorAll(".screen");
     screens.forEach(screen => screen.classList.remove("active"));
@@ -47,4 +53,74 @@ function restart() {
     postChoice = "";
     privacyChoice = "";
     nextScreen(1);
+}
+
+// POST CHOICE
+
+function choosePost2(type) {
+    postChoice2 = type;
+
+    nextScreen(10);
+
+    let resultText = document.getElementById("resultText2");
+
+    if (type === "safe") {
+        resultText.innerText = "This post receives positive comments. People react well, and Alex establishes a more lively and disciplined online persona.";
+    } else {
+        resultText.innerText = "Although this message quickly attracts attention, not all of it is good. It causes discussion, and some start to doubt Alex's judgement.";
+    }
+}
+function choosePrivacy2(type) {
+    privacyChoice2 = type;
+
+    let finalText = document.getElementById("finalText2");
+
+    if (postChoice2 === "safe" && type === "private") {
+        finalText.innerText = "Best case: stays private, no issues.";
+    } 
+    else if (postChoice2 === "safe" && type === "public") {
+        finalText.innerText = "Safe but public — more exposure.";
+    } 
+    else if (postChoice2 === "risky" && type === "private") {
+        finalText.innerText = "Private but still spreads — screenshot risk.";
+    } 
+    else {
+        finalText.innerText = "Worst case — spreads widely, consequences.";
+    }
+    nextScreen(12);
+}
+
+// POST CHOICE
+function choosePost3(type) {
+    postChoice3 = type;
+
+    nextScreen(16);
+
+    let resultText = document.getElementById("resultText3");
+
+    if (type === "safe") {
+        resultText.innerText = "This post stays professional and reflects well on her career.";
+    } else {
+        resultText.innerText = "This post raises concerns and may expose internal workplace issues.";
+    }
+}
+function choosePrivacy3(type) {
+    privacyChoice3 = type;
+
+    let finalText = document.getElementById("finalText3");
+
+    if (postChoice3 === "safe" && type === "private") {
+        finalText.innerText = "keeps a small audience for her post. Her performance at work is unaffected, and it stays professional.";
+    } 
+    else if (postChoice3 === "safe" && type === "public") {
+        finalText.innerText = "Tulse's post is public but appropriate. It contributes positively to her professional image.";
+    } 
+    else if (postChoice3 === "risky" && type === "private") {
+        finalText.innerText = "Tulse's assumed it would stay private, but it spreads. Sensitive workplace information is now outside her control.";
+    } 
+    else {
+        finalText.innerText = "Tulse’s post exposes internal company information publicly. It spreads quickly, and her employer becomes aware. This leads to serious consequences, including losing her job.";
+    }
+
+    nextScreen(18); // your Tulsa final screen
 }
